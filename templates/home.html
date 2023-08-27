@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>AWS IP Ranges scaper</title>
+    </head>
+    <body>
+        <form action="/refresh" method="get">
+        <button type="submit">Refresh</button>
+        </form>
+        <form method="post">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+        <input type="text" name="search" placeholder="Search">
+        <button type="submit">Search</button>
+        </form>
+        <h3>{{ table }}</h3>
+    </body>
+</html>
